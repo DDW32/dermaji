@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah</title>
+    <link rel="stylesheet" href="static/css/tambah.css">
+</head>
+
+<body>
+    <div id="upper">
+        <div class="logo">
+            <img src="static/images/logoumkm.png" alt="" class="gbrjanji">
+        </div>
+        <div id="navigator">
+            <div class="menu">
+                <a href="{{ url_for('home') }}">
+                    <img class="menuimg" src="static/images/home.png" alt="">
+                    <p class="menutxt">BERANDA</p>
+                </a>
+            </div>
+            <div class="menu">
+                <a href="{{ url_for('admin') }}">
+                    <img class="menuimg" src="static/images/admin.png" alt="">
+                    <p class="menutxt">ADMIN</p>
+                </a>
+            </div>
+            <div class="menu">
+                <a href="{{ url_for('tambah') }}">
+                    <img class="menuimg" src="static/images/+.png" alt="">
+                    <p class="menutxt">TAMBAH</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="form-box">
+            <form id="productForm" action="{{ url_for('tambah') }}" method="post" enctype="multipart/form-data">
+                <h2>Tambah Produk</h2>
+                <label for="productName">Nama Produk:</label>
+                <input type="text" id="productName" name="productName" required><br><br>
+
+                <label for="price">Harga:</label>
+                <input type="text" id="price" name="price" required><br><br>
+
+                <label for="description">Deskripsi Produk:</label>
+                <textarea id="description" name="description" rows="4" required></textarea><br><br>
+
+                <label for="whatsapp">No WA:</label>
+                <input type="tel" id="whatsapp" name="whatsapp" pattern="\+62[0-9]{9,14}" required value="+62"><br><br>
+
+                <script>
+                    document.getElementById('whatsapp').addEventListener('input', function () {
+                        let value = this.value;
+                        if (!value.startsWith('+62')) {
+                            this.value = '+62' + value.replace(/^(\+62)?/, '');
+                        }
+                    });
+                </script>
+                <label for="productImage">Gambar Produk:</label>
+                <input type="file" id="productImage" name="productImage" accept="image/*" required><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p class="footertxt">© 2024. All Rights Reserved.</p>
+    </div>
+</body>
+
+</html>

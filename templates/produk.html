@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/produk.css') }}">
+</head>
+
+<body>
+    <div id="upper">
+        <div class="logo">
+            <img src="static\images\logoumkm.png" alt="" class="gbrjanji">
+        </div>
+        <div id="navigator">
+            <div class="menu">
+                <a href="{{ url_for('home') }}">
+                    <img class="menuimg" src="{{ url_for('static', filename='images/home.png') }}" alt="">
+                    <p class="menutxt">BERANDA</p>
+                </a>
+            </div>
+            <div class="menu">
+                <a href="{{ url_for('produk') }}">
+                    <img class="menuimg" src="{{ url_for('static', filename='images/tas.png') }}" alt="">
+                    <p class="menutxt">PRODUK</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="baris1">
+            {% for product_id, product in products.items() %}
+            <div class="produk">
+                <img class="imgproduk" src="{{ url_for('static', filename=product['image']) }}" alt="">
+                <p class="namaproduk">{{ product['name'] }}</p>
+                <p class="hargaproduk">RP.{{ product['price'] }}</p>
+                <form action="{{ url_for('produk_detail', product_id=product_id) }}">
+                    <button type="submit">LIHAT</button>
+                </form>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div id="footer">
+        <p class="footertxt">© 2024. All Rights Reserved.</p>
+    </div>
+</body>
+
+</html>

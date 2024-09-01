@@ -1,0 +1,51 @@
+{
+    "1": {
+        "name": "Anggita Donat Bulat",
+        "price": "3000",
+        "description": "Donat Bulat Anggita \r\n\r\nVarian :\r\n-Keju\r\n- Strawberry \r\n- Coklat\r\n- Coklat Kacang\r\n\r\nTanpa Pengawet",
+        "whatsapp": "+6281211817732",
+        "image": "upload/IMG-20240825-WA0090.jpg"
+    },
+    "2": {
+        "name": "Donat Anggita Rasa Daging",
+        "price": "3000",
+        "description": "Donat Rasa Daging.",
+        "whatsapp": "+6281211817732",
+        "image": "upload/IMG-20240825-WA0091.jpg"
+    },
+    "3": {
+        "name": "Donat Anggita Rasa Daging Ayam",
+        "price": "3000",
+        "description": "Rasa Daging Ayam dengan Isian Ayam yang lezat.",
+        "whatsapp": "+6281211817732",
+        "image": "upload/IMG-20240825-WA0099.jpg"
+    },
+    "4": {
+        "name": "Donat Anggita Kembung",
+        "price": "3000",
+        "description": "Donat Anggita Dengan Bentuk Kembung. Memiliki Beberapa Varian Rasa Manis.",
+        "whatsapp": "+6281211817732",
+        "image": "upload/IMG-20240825-WA0087.jpg"
+    },
+    "5": {
+        "name": "Kecimpring Mentah",
+        "price": "25000",
+        "description": "Kecimpring Mentah Kering Harga  Rp.25000 per kilo.",
+        "whatsapp": "+6200000000000",
+        "image": "upload/IMG-20240828-WA01041.jpg"
+    },
+    "6": {
+        "name": "Kecimpring Goreng Original",
+        "price": "15000",
+        "description": "Kecimpring Goreng Original",
+        "whatsapp": "+6200000000000",
+        "image": "upload/17252149817397632500626373935533.jpg"
+    },
+    "7": {
+        "name": "Susu Kambing Murni",
+        "price": "20000",
+        "description": "Susu Kambing Murni Segar Rp.20.000 per kilo.",
+        "whatsapp": "+6200000000000",
+        "image": "upload/images.jpeg"
+    }
+}

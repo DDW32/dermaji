@@ -1,0 +1,267 @@
+@charset "utf-8";
+
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+#upper {
+    padding: 10px 20px;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    flex-wrap: nowrap;
+    /* Jangan bungkus, tetap satu baris */
+}
+
+.gbrlogo {
+    height: 80px;
+}
+
+.gbrjanji {
+    height: 100px;
+    margin-left: 2%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    flex: 1;
+}
+
+#navigator {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    padding-left: 0;
+    gap: 15px;
+}
+
+.menu {
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin: 0;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.menu:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+.menuimg {
+    height: 40px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.menutxt {
+    margin-top: 5px;
+    color: white;
+}
+
+@media (max-width: 1024px) {
+    #upper {
+        padding: 10px;
+        flex-wrap: nowrap;
+        /* Tetap satu baris di tablet */
+    }
+
+    .gbrlogo {
+        height: 70px;
+    }
+
+    .gbrjanji {
+        height: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gbrlogo {
+        height: 60px;
+    }
+
+    .gbrjanji {
+        height: 80px;
+    }
+
+    #navigator {
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+    .menu {
+        padding: 6px 10px;
+    }
+
+    .menuimg {
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    #upper {
+        justify-content: space-between;
+        padding: 5px 10px;
+        flex-wrap: nowrap;
+        /* Tetap satu baris di HP */
+    }
+
+    .logo,
+    #navigator {
+        width: auto;
+        padding: 0;
+        margin: 0;
+        justify-content: space-between;
+    }
+
+    .gbrlogo {
+        height: 50px;
+        display: none;
+    }
+
+    .gbrjanji {
+        height: 70px;
+        margin-left: 2%;
+    }
+
+    .menu {
+        padding: 5px 8px;
+        width: auto;
+    }
+
+    .menuimg {
+        height: 30px;
+    }
+}
+
+#footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+.footertxt {
+    color: white;
+    font-size: 0.9em;
+}
+
+#content {
+    padding-top: 5%;
+    padding-bottom: 20%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#baris1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    justify-content: space-between;
+}
+
+.produk {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    flex: 1 1 calc(25% - 20px);
+    box-sizing: border-box;
+    max-width: calc(25% - 20px);
+}
+
+.imgproduk {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.namaproduk {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+}
+
+.hargaproduk {
+    font-weight: bold;
+    color: #555;
+}
+
+form button {
+    background-color: #d9534f;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #c9302c;
+}
+
+@media (max-width: 1024px) {
+    .produk {
+        flex: 1 1 calc(33.33% - 20px);
+        max-width: calc(33.33% - 20px);
+    }
+
+    .imgproduk {
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .produk {
+        flex: 1 1 calc(33.33% - 20px);
+        /* Tetap 3 kolom di tablet */
+        max-width: calc(33.33% - 20px);
+    }
+
+    .imgproduk {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .produk {
+        flex: 1 1 calc(50% - 10px);
+        /* Tetap 2 kolom di HP */
+        max-width: calc(50% - 10px);
+    }
+
+    .imgproduk {
+        height: 120px;
+    }
+
+    .namaproduk {
+        font-size: 1.1em;
+    }
+
+    .hargaproduk {
+        font-size: 0.9em;
+    }
+
+    form button {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+}

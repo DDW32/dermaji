@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+
+<body>
+    <div id="upper">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logoumkm.png') }}" alt="" class="gbrjanji">
+        </div>
+        <div id="navigator">
+            <div class="menu">
+                <a href="{{ url_for('home') }}">
+                    <img class="menuimg" src="{{ url_for('static', filename='images/home.png') }}" alt="">
+                    <p class="menutxt">BERANDA</p>
+                </a>
+            </div>
+            <div class="menu">
+                <a href="{{ url_for('admin') }}">
+                    <img class="menuimg" src="{{ url_for('static', filename='images/admin.png') }}" alt="">
+                    <p class="menutxt">ADMIN</p>
+                </a>
+            </div>
+            <div class="menu">
+                <a href="{{ url_for('tambah') }}">
+                    <img class="menuimg" src="{{ url_for('static', filename='images/+.png') }}" alt="">
+                    <p class="menutxt">TAMBAH</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="baris1">
+            {% for product_id, product in products.items() %}
+            <div class="produk">
+                <a href="{{ url_for('produk_detail', product_id=product_id) }}">
+                    <img class="imgproduk" src="{{ url_for('static', filename=product['image']) }}" alt="">
+                    <p class="namaproduk">{{ product['name'] }}</p>
+                    <p class="hargaproduk">RP.{{ product['price'] }}</p>
+                </a>
+                <form action="{{ url_for('delete', product_id=product_id) }}" method="post"
+                    onsubmit="return confirm('Are you sure you want to delete this product?');">
+                    <button type="submit">HAPUS</button>
+                </form>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div id="footer">
+        <p class="footertxt">© 2024. All Rights Reserved.</p>
+    </div>
+</body>
+
+</html>

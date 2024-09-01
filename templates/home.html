@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="static\css\home.css">
+</head>
+<body>
+    <div id="upper">
+        <div class="logo">
+            <img src="static\images\logoumkm.png" alt="" class="gbrjanji">
+        </div>
+        <div id="navigator">
+            <div class="menu">
+                <a href="{{ url_for('home') }}">
+                    <img class="menuimg" src="static\images\home.png" alt="">
+                    <p class="menutxt">BERANDA</p>
+                </a>
+            </div>
+            <div class="menu">
+                <a href="{{ url_for('produk') }}">
+                    <img class="menuimg" src="static\images\tas.png" alt="">
+                    <p class="menutxt">PRODUK</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="isi">
+        <h1 class="sambutan1">
+            SELAMAT DATANG
+        </h1>
+        <H1 class="sambutan2">
+            DI
+        </H1>
+        <img class="logotengah" src="static\images\logoumkm.png" alt="">
+        <div class="blok">
+            <h2>
+                Usaha Mikro Kecil Menengah
+                (UMKM)
+                Desa Dermaji
+            </h2>
+            <div>
+                <h3>
+                    MEMBANGUNG DESA, MENGANGKAT USAHA, MEMAJUKAN BANGSA
+                </h3>
+                <h4>
+                    Menggambarkan pentingnya pembangunan desa dalam meningkatkan kesejahteraan lokal dan mengembangkan UMKM. Dengan
+                    memperbaiki infrastruktur dan memberikan dukungan kepada pengusaha lokal, desa-desa dapat menjadi pusat
+                    pertumbuhan
+                    ekonomi. Ini tidak hanya meningkatkan kualitas hidup masyarakat setempat, tetapi juga berkontribusi pada
+                    kemajuan
+                    ekonomi nasional. Pemberdayaan desa dan usaha lokal menciptakan dampak positif yang luas, mendorong stabilitas
+                    sosial
+                    dan kesejahteraan yang merata di seluruh negeri
+                </h4>
+            </div>
+        </div>
+    </div>
+
+    <div id="admin">
+        <a href="{{ url_for('login') }}">
+            <img class="adminimg" src="static/images/admin.png" alt="">
+        </a>
+    </div>
+
+
+
+    <div id="footer">
+        <p class="footertxt">© 2024. All Rights Reserved.</p>
+    </div>
+</body>
+</html>

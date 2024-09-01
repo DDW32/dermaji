@@ -1,0 +1,242 @@
+@charset "utf-8";
+
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+#upper {
+    padding: 10px 20px;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    flex-wrap: nowrap;
+}
+
+.gbrlogo {
+    height: 80px;
+}
+
+.gbrjanji {
+    height: 100px;
+    margin-left: 2%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    flex: 1;
+}
+
+#navigator {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    padding-left: 0;
+    gap: 15px;
+}
+
+.menu {
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin: 0;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.menu:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+.menuimg {
+    height: 40px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.menutxt {
+    margin-top: 5px;
+    color: white;
+}
+
+@media (max-width: 1024px) {
+    .gbrlogo {
+        height: 70px;
+    }
+
+    .gbrjanji {
+        height: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gbrlogo {
+        height: 60px;
+    }
+
+    .gbrjanji {
+        height: 80px;
+    }
+
+    #navigator {
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+    .menu {
+        padding: 6px 10px;
+    }
+
+    .menuimg {
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    #upper {
+        justify-content: space-between;
+        padding: 5px 10px;
+        flex-wrap: nowrap;
+    }
+
+    .logo,
+    #navigator {
+        width: auto;
+        padding: 0;
+        margin: 0;
+        justify-content: space-between;
+    }
+
+    .gbrlogo {
+        height: 50px;
+        display: none;
+    }
+
+    .gbrjanji {
+        height: 70px;
+        margin-left: 2%;
+    }
+
+    .menu {
+        padding: 5px 8px;
+        width: auto;
+    }
+
+    .menuimg {
+        height: 30px;
+    }
+}
+
+#footer{
+    background-color: #333;
+    padding: 20px;
+}
+
+.footertxt{
+    color: white;
+    text-align: center;
+}
+
+/* Container for centering */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e0e0e0;
+    padding: 20px;
+    /* Light gray background for the whole page */
+}
+
+/* Form box styling */
+.form-box {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    /* Light gray border */
+}
+
+/* Title styling */
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Style for form labels */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Style for form inputs */
+form input[type="text"],
+form input[type="tel"],
+form input[type="file"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Style for submit button */
+form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Style for the file input label */
+form input[type="file"] {
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .form-box {
+        padding: 15px;
+    }
+
+    form input[type="text"],
+    form input[type="tel"],
+    form input[type="file"],
+    form textarea,
+    form input[type="submit"] {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,329 @@
+@charset "utf-8";
+
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+#upper {
+    padding: 10px 20px;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    flex-wrap: nowrap;
+}
+
+.gbrlogo {
+    height: 80px;
+}
+
+.gbrjanji {
+    height: 100px;
+    margin-left: 2%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    flex: 1;
+}
+
+#navigator {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    padding-left: 0;
+    gap: 15px;
+}
+
+.menu {
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin: 0;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.menu:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+.menuimg {
+    height: 40px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.menutxt {
+    margin-top: 5px;
+    color: white;
+}
+
+@media (max-width: 1024px) {
+    .gbrlogo {
+        height: 70px;
+    }
+
+    .gbrjanji {
+        height: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gbrlogo {
+        height: 60px;
+    }
+
+    .gbrjanji {
+        height: 80px;
+    }
+
+    #navigator {
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+    .menu {
+        padding: 6px 10px;
+    }
+
+    .menuimg {
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    #upper {
+        justify-content: space-between;
+        padding: 5px 10px;
+        flex-wrap: nowrap;
+    }
+
+    .logo,
+    #navigator {
+        width: auto;
+        padding: 0;
+        margin: 0;
+        justify-content: space-between;
+    }
+
+    .gbrlogo {
+        height: 50px;
+        display: none;
+    }
+
+    .gbrjanji {
+        height: 70px;
+        margin-left: 2%;
+    }
+
+    .menu {
+        padding: 5px 8px;
+        width: auto;
+    }
+
+    .menuimg {
+        height: 30px;
+    }
+}   
+
+/* Product Detail Section */
+.produk_detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    background-color: #f8f8f8;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.produk_detail:hover {
+    transform: scale(1.02);
+}
+
+.img_container {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.imgproduk {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.detail_container {
+    flex: 2;
+    padding: 20px;
+}
+
+.hargaproduk {
+    font-size: 24px;
+    color: #d9534f;
+    font-weight: bold;
+    margin: 10px 0;
+    padding-bottom: 20px;
+}
+
+.kolomdeskripsi {
+    background-color: #dfdfdf;
+    padding: 20px;
+    border-radius: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+    width: 100%;
+    /* Ensuring the column uses the full available width */
+}
+
+.whatsapp_btn {
+    margin-top: 20px;
+    background-color: #25d366;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp_btn a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.whatsapp_btn:hover {
+    background-color: #1ebe57;
+    transform: translateY(-2px);
+}
+
+/* Footer Section */
+#footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.footertxt {
+    margin: 0;
+}
+
+/* Media Queries */
+
+/* Tablets and larger phones */
+@media (max-width: 992px) {
+    .produk_detail {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 90%;
+    }
+
+    .img_container,
+    .detail_container {
+        padding: 15px;
+    }
+
+    .hargaproduk {
+        font-size: 22px;
+    }
+
+    .deskripsi {
+        font-size: 14px;
+    }
+
+    .whatsapp_btn {
+        padding: 8px 16px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 768px) {
+    .produk_detail {
+        flex-direction: column;
+        width: 95%;
+        padding: 15px;
+    }
+
+    .img_container,
+    .detail_container {
+        padding: 10px;
+    }
+
+    .hargaproduk {
+        font-size: 20px;
+    }
+
+    .deskripsi {
+        font-size: 13px;
+    }
+
+    .whatsapp_btn {
+        padding: 8px 14px;
+    }
+
+    .menuimg {
+        height: 35px;
+    }
+
+    .gbrlogo {
+        height: 50px;
+    }
+
+    .gbrjanji {
+        height: 30px;
+    }
+}
+
+/* Smaller mobile phones */
+@media (max-width: 576px) {
+    .gbrlogo {
+        height: 45px;
+    }
+
+    .gbrjanji {
+        height: 25px;
+    }
+
+    .menuimg {
+        height: 30px;
+    }
+
+    .produk_detail {
+        width: 98%;
+        padding: 10px;
+    }
+
+    .hargaproduk {
+        font-size: 18px;
+    }
+
+    .deskripsi {
+        font-size: 12px;
+    }
+
+    .whatsapp_btn {
+        padding: 6px 10px;
+    }
+}
+
+#content{
+    padding-bottom: 5%;
+}
